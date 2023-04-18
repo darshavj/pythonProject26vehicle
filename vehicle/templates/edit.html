@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{% static 'edit.css' %}">
+</head>
+<body>
+<div class="order">
+  <h2>EDIT <span>VEHICLES</span>DETAILS</h2>
+  <div class="main">
+<form method="POST" action="{% url 'update' sad.id %}" enctype="multipart/form-data">
+  <div class="input">
+  <p>model :</p>
+  <input type="text" name="model" value="{{sad.model}}"></div>
+  <div class="input">
+  <p>image :</p>
+  <input type="file" name="image" value="{{sad.image}}"></div>
+  <div class="input">
+  <p>number :</p>
+  <input type="number" name="number" value="{{sad.number}}"></div>
+  <div class="input">
+  <p>wheels :</p>
+  <input type="text" name="wheels" value="{{sad.wheels}}"></div>
+   <div class="input">
+  <p>description :</p>
+  <input type="text" name="description" value="{{sad.description}}"></div>
+  {%csrf_token%} </div>
+<button style="left:200px;">submit</button>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'super.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Vehicle Details</h2>
+
+<div class="main-btn">
+  <button style="width:130px; height:40px;margin:20px;position:absolute;top:20px;background:yellow;"><a href="{% url 'item' %}">Add</a></button>
+    </div>
+  <button><a href="{% url 'logout' %}">logout</a></button>
+<table class="table">
+  <thead>
+  <tr>
+    <th>model</th>
+    <th>image</th>
+    <th>number</th>
+    <th>wheels</th>
+    <th>description</th>
+    <th>edit details</th>
+    <th>delete details</th>
+
+  </tr>
+  </thead>
+{%for i in values%}
+
+<tr>
+  <td>{{i.model}}</td>
+  <td><img src="{{i.image.url}}"  style="width:200px;height:200px;"></td>
+  <td>{{i.number}}</td>
+  <td>{{i.wheels}}</td>
+  <td>{{i.description}}</td>
+  <td><a href="{% url 'update' i.id %}">Edit</a></td>
+  <td><a href="{% url 'delete' i.id %}">Delete</a></td>
+
+
+</tr>
+
+
+  {%endfor%}
+</table>
+
+  </div>
+
+</body>
+</html>

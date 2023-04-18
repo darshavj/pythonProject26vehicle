@@ -1,0 +1,52 @@
+*{
+    padding:0%;
+    margin:0;
+    font-family:sans-serif;
+}
+body{
+    background:lightblue;
+
+}
+.regi{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+}
+.regi h1
+{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+    width:100%;
+}
+.regi p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.regi input{
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+input:focus{
+   border: 2px solid rgb(49, 49, 2);
+}
+.regi button{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 50%;
+    border:0;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.regi button:hover{
+    color: rgb(6, 211, 219);
+}

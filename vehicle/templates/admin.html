@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+</head>
+<body>
+<div class="container">
+<h2>Vehicle Details</h2>
+  <button><a href="{% url 'logout' %}">logout</a></button>
+<table class="table">
+  <thead>
+  <tr>
+    <th>model</th>
+    <th>image</th>
+    <th>number</th>
+    <th>wheels</th>
+    <th>description</th>
+    <th>edit details</th>
+
+  </tr>
+  </thead>
+{%for i in das%}
+
+<tr>
+  <td>{{i.model}}</td>
+  <td><img src="{{i.image.url}}" style="width:200px;height:200px;" ></td>
+  <td>{{i.number}}</td>
+  <td>{{i.wheels}}</td>
+  <td>{{i.description}}</td>
+  <button class="btn"><td><a href="{% url 'update' i.id %}">edit</a></td></button>
+
+</tr>
+
+  {%endfor%}
+</table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body style="background:grey;">
+<div class="logo" style="text-align:center;margin-top:200px;background:white;width:350px;padding:40px 30px;margin-left:500px;">
+ <h1> LOGIN FORM </h1>
+<form action="log" method="POST">
+  <p>Email:</p>
+  <input type="email" placeholder="email" required name="email" ><br><br>
+  <p>password:</p>
+  <input type="password"  placeholder="password" required name="password"><br><br>
+  <button>submitt</button>
+    {%csrf_token%}
+    <p> create an account </p>
+    <a href="about">click here</a>
+
+
+</form>
+    </div>
+
+</body>
+</html>

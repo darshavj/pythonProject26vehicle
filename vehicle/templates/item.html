@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" href="{% static 'item.css' %}">
+</head>
+<body>
+<div class="title">
+<h3>vehicles details</h3>
+<form action="item2" method="POST" enctype="multipart/form-data">
+    <label>Vehicle model:</label>
+    <input type="text" name="model">
+    <label>Vehicle Image:</label>
+    <input type="file" name="image">
+    <label>Vehicle Number:</label>
+    <input type="text" name="number">
+    <label>Vehicle Type:</label>
+    <input type="text" name="wheels">
+    <label>Description:</label>
+    <input type="text" name="description">
+    <button>submitt</button>
+    {%csrf_token%}
+</form>
+    </div>
+
+
+</body>
+</html>

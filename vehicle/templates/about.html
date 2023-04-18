@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+<body>
+<div class="regi">
+<h1>REGISTRACTION FORM</h1>
+
+<form method="POST" action="about1">
+    <p>Name:</p>
+    <input type="text" name="name" required pattern="^[A-Za-z]+">
+    <p>Email:</p>
+    <input type="email" name="email" required >
+    <p>Password:</p>
+    <input type="password" name="password" required >
+    <p>Place:</p>
+    <input type="text" name="place" required pattern="^[A-Za-z]+">
+    <button >submitt</button>
+    {%csrf_token%}
+</form>
+</div>
+
+</body>
+</html>
